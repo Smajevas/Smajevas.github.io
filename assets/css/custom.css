@@ -1,0 +1,58 @@
+:root {
+  --default-font: "Poppins", sans-serif;
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+
+  --default-color: #D8F3DC;
+  --heading-color: #B7E4C7;
+  --accent-color: #A8E6CF;
+}
+
+/* 3a. Mygtukų stilius */
+.hero .hero-content .hero-actions a.btn {
+  background: #A8E6CF !important;
+  color: #17365d !important;
+  border: 2px solid #A8E6CF !important;
+  border-radius: 15px;
+  padding: 14px 28px;
+  transition: all 0.3s ease;
+}
+
+/* Užvedus pelę */
+.hero .hero-content .hero-actions a.btn:hover {
+  background: #74C69D !important;
+  border-color: #74C69D !important;
+  transform: translateY(-5px);
+}
+
+/* Paspaudus */
+.hero .hero-content .hero-actions a.btn:active {
+  background: #52B788 !important;
+  transform: scale(0.95);
+}
+
+/* 3b. Navigacijos nuorodos */
+.header .navmenu ul li a {
+  color: #A8E6CF !important;
+  transition: color 0.3s ease;
+}
+
+/* Užvedus pelę */
+.header .navmenu ul li a:hover {
+  color: #52B788 !important;
+}
+
+/* Aktyvus puslapis */
+.header .navmenu ul li a.active {
+  color: #95D5B2 !important;
+  font-weight: 700;
+}
+
+body {
+  background-color: red !important;
+}
+
+.hero .hero-actions a {
+  background: red !important;
+  color: white !important;
+}
