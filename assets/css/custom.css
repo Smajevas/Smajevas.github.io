@@ -195,3 +195,197 @@ main a:not(.btn):hover {
     padding-right: 15px;
   }
 }
+
+/* ==================================
+   5 UZDUOTIS - KOMPONENTAI
+================================== */
+
+/* 5a. NAVIGACIJOS MENIU */
+
+.header .navmenu a {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Navigacija uzvedus pele */
+.header .navmenu a:hover {
+  color: #52B788 !important;
+  background-color: rgba(82, 183, 136, 0.15);
+}
+
+/* Aktyvus navigacijos elementas */
+.header .navmenu a.active {
+  color: #95D5B2 !important;
+  font-weight: 700;
+}
+
+
+/* 5b. IGUDZIU PROGRESO JUOSTOS */
+
+/* Progreso juostos fonas */
+.resume .skill-item .progress,
+.skills .skill-item .progress {
+  height: 14px;
+  background-color: #294D40;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Progreso juostos uzpildymas */
+.resume .skill-item .progress-bar,
+.skills .skill-item .progress-bar {
+  background: linear-gradient(
+    90deg,
+    #52B788,
+    #A8E6CF
+  );
+  height: 100%;
+  border-radius: 12px;
+  transition: width 0.8s ease;
+}
+
+/* Efektas uzvedus pele */
+.resume .skill-item:hover .progress-bar,
+.skills .skill-item:hover .progress-bar {
+  filter: brightness(1.2);
+}
+
+/* ==================================
+   PAPILDOMA UZDUOTIS - SARASAI
+================================== */
+
+/* Numeruotas sarasas */
+.services ol {
+  list-style: none;
+  counter-reset: item;
+  padding-left: 0;
+}
+
+.services ol > li {
+  counter-increment: item;
+  padding: 12px 18px;
+  margin-bottom: 10px;
+  background-color: rgba(82, 183, 136, 0.12);
+  border-left: 4px solid #52B788;
+  border-radius: 8px;
+}
+
+.services ol > li::before {
+  content: counter(item) ". ";
+  color: #95D5B2;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+/* Nenumeruotas sarasas */
+.services ul {
+  list-style: none;
+  padding-left: 15px;
+}
+
+.services ul > li {
+  padding: 8px 12px;
+  margin-bottom: 8px;
+}
+
+.services ul > li::before {
+  content: "◆";
+  color: #52B788;
+  margin-right: 10px;
+}
+
+/* ==================================
+   PAPILDOMA UZDUOTIS - IDĖTINIS SARASAS
+================================== */
+
+.services ul ul,
+.services ol ul {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding: 15px 20px;
+  background-color: rgba(82, 183, 136, 0.08);
+  border-left: 3px dashed #A8E6CF;
+  border-radius: 10px;
+}
+
+.services ul ul > li,
+.services ol ul > li {
+  font-size: 14px;
+  font-style: italic;
+  color: #D8F3DC;
+  padding: 8px;
+}
+
+.services ul ul > li::before,
+.services ol ul > li::before {
+  content: "→";
+  color: #A8E6CF;
+  margin-right: 10px;
+}
+
+/* ==================================
+   PAPILDOMA UZDUOTIS - LENTELE
+================================== */
+
+/* Lenteles isvaizda */
+.services table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Lenteles antraste */
+.services table thead th {
+  background-color: #2D6A4F;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 18px;
+  text-align: center;
+}
+
+/* Visi lenteles langeliai */
+.services table th,
+.services table td {
+  padding: 15px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #40916C;
+}
+
+/* Zebra efektas */
+.services table tbody tr:nth-child(even) {
+  background-color: #244739;
+  color: white;
+}
+
+.services table tbody tr:nth-child(odd) {
+  background-color: #18372C;
+  color: white;
+}
+
+/* Hover efektas */
+.services table tbody tr:hover {
+  background-color: #40916C;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+/* Pritaikymas telefonams */
+@media (max-width: 768px) {
+  .services table th,
+  .services table td {
+    padding: 8px;
+    font-size: 13px;
+  }
+}
