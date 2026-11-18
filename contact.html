@@ -126,34 +126,87 @@
               <h3>Susisiekime</h3>
               <p>Esu atviras profesiniams kontaktams, naujoms galimybėms ir bendradarbiavimui elektros energetikos srityje. Jei turite klausimų ar norite aptarti galimą bendradarbiavimą, parašykite man el. paštu arba susisiekite telefonu.</p>
 
-              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-                <div class="row gy-4">
+              <form 
+<!-- 10 LAB - KONTAKTU FORMA -->
+<form id="contactForm" novalidate>
 
-                  <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Vardas Pavardė" required="">
-                  </div>
+  <div class="row gy-4">
 
-                  <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Paštas" required="">
-                  </div>
+    <div class="col-md-6">
+      <label for="vardas">Vardas</label>
+      <input type="text" id="vardas"
+             class="form-control"
+             placeholder="Įveskite vardą" required>
+    </div>
 
-                  <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Tema" required="">
-                  </div>
+    <div class="col-md-6">
+      <label for="pavarde">Pavardė</label>
+      <input type="text" id="pavarde"
+             class="form-control"
+             placeholder="Įveskite pavardę" required>
+    </div>
 
-                  <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Žinutė" required=""></textarea>
-                  </div>
+    <div class="col-md-6">
+      <label for="pastas">El. paštas</label>
+      <input type="email" id="pastas"
+             class="form-control"
+             placeholder="vardas@pastas.lt" required>
+    </div>
 
-                  <div class="col-12 text-center">
-                    <div class="loading">Kraunama</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Jūsų žinutė buvo išsiųsta. Ačiū!</div>
+    <div class="col-md-6">
+      <label for="telefonas">Telefono numeris</label>
+      <input type="tel" id="telefonas"
+             class="form-control"
+             placeholder="+37060000000" required>
+    </div>
 
-                    <button type="submit" class="btn">Siųsti žinutę</button>
-                  </div>
+    <div class="col-12">
+      <label for="adresas">Adresas</label>
+      <input type="text" id="adresas"
+             class="form-control"
+             placeholder="Įveskite adresą" required>
+    </div>
 
-                </div>
+    <div class="col-12">
+      <label for="klausimas1">
+        1. Kaip vertinate mano svetainės dizainą? (1–10)
+      </label>
+      <input type="range" id="klausimas1"
+             min="1" max="10" value="5"
+             class="form-range">
+    </div>
+
+    <div class="col-12">
+      <label for="klausimas2">
+        2. Kaip vertinate svetainės patogumą? (1–10)
+      </label>
+      <input type="range" id="klausimas2"
+             min="1" max="10" value="5"
+             class="form-range">
+    </div>
+
+    <div class="col-12">
+      <label for="klausimas3">
+        3. Kaip vertinate pateiktos informacijos aiškumą? (1–10)
+      </label>
+      <input type="range" id="klausimas3"
+             min="1" max="10" value="5"
+             class="form-range">
+    </div>
+
+    <div class="col-12 text-center">
+      <button type="submit" class="btn btn-success">
+        Siųsti
+      </button>
+    </div>
+
+  </div>
+
+</form>
+
+<!-- Cia JavaScript parodys formos duomenis -->
+<div id="formResult" class="mt-4"></div>
+
               </form>
 
             </div>
@@ -210,6 +263,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom.js"></script>
 
 </body>
 
