@@ -439,6 +439,7 @@ main a:not(.btn):hover {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 25px;
   align-items: start;
+  width: 100%;
 }
 
 /* Stulpeliu isvaizda */
